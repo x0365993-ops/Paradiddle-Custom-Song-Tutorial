@@ -9,28 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-  /* Fixed bottom-left gradient with subtle fade animation */
+  /* Subtle tiny ultra blue glow in bottom-left fading softly to top-left black */
   body {
-    background: radial-gradient(circle at bottom left, rgba(0, 191, 255, 0.25) 0%, rgba(0, 0, 0, 1) 40%);
+    background: radial-gradient(circle at bottom left, #00bfff 2%, #000000 80%);
     color: #eee;
     font-family: 'Figtree', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     overflow-x: hidden;
-    animation: gradient-fade 6s ease-in-out infinite alternate;
-  }
-
-  @keyframes gradient-fade {
-    0% {
-      background: radial-gradient(circle at bottom left, rgba(0, 191, 255, 0) 0%, rgba(0, 0, 0, 1) 40%);
-    }
-    50% {
-      background: radial-gradient(circle at bottom left, rgba(0, 191, 255, 0.25) 0%, rgba(0, 0, 0, 1) 40%);
-    }
-    100% {
-      background: radial-gradient(circle at bottom left, rgba(0, 191, 255, 0) 0%, rgba(0, 0, 0, 1) 40%);
-    }
   }
 
   .container {
@@ -65,13 +52,14 @@
     font-family: 'Figtree', sans-serif;
   }
 
+  /* Animated heading underline gradient line */
   .section-title::after {
     content: '';
     display: block;
     height: 3px;
     width: 0;
     margin-top: 4px;
-    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    background: linear-gradient(135deg, #1e90ff, #00bfff); /* Diamond → Ultra blue */
     animation: line-grow 1s forwards ease-out;
   }
 
@@ -88,20 +76,22 @@
     padding-left: 1.2rem;
   }
 
+  /* Folder path styling - super white-blue */
   .folder-path {
     font-family: monospace;
-    color: #e6f7ff;
+    color: #e6f7ff; /* super white-blue */
     display: block;
     margin-left: 1rem;
     margin-bottom: 0.5rem;
   }
 
+  /* Hover effect on steps - fade to diamond blue */
   li {
     transition: color 0.5s ease;
   }
 
   li:hover {
-    color: #1e90ff;
+    color: #1e90ff; /* Diamond Blue */
   }
 
   li:hover .folder-path {
@@ -116,6 +106,7 @@
   <div class="container">
     <h1>How To Import Custom Songs</h1>
 
+    <!-- Embed the video -->
     <iframe
       src="https://www.youtube.com/embed/RIkUU_zpfZA"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
